@@ -21,7 +21,11 @@ export default function Countries() {
   };
 
   return (
-    <>
+    <div
+      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+    >
+      <h1 style={{ margin: "4rem" }}>GraphQL-Countries</h1>
+
       <CountryForm
         countries={countries}
         isLoading={isLoading}
@@ -29,6 +33,6 @@ export default function Countries() {
       />
 
       {selectedCountry && <CountryData country={selectedCountry} />}
-    </>
+    </div>
   );
 }

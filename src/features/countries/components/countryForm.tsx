@@ -44,6 +44,12 @@ export default function CountryForm({
           value={selectedCountryId}
           onChange={(e) => setSelectedCountryId(e.target.value)}
           disabled={isLoading}
+          style={{
+            width: "250px",
+            padding: "4px",
+            border: "2px solid black",
+            borderRadius: "4px",
+          }}
         >
           <option value="" disabled>
             Select a country
@@ -62,7 +68,7 @@ export default function CountryForm({
           marginTop: "1rem",
           display: "flex",
           justifyContent: "center",
-          gap: "1rem",
+          gap: "1.5rem",
         }}
       >
         <button
@@ -71,11 +77,16 @@ export default function CountryForm({
             setSelectedCountryId("");
             onSubmit("");
           }}
+          style={{ border: "1px solid grey" }}
           disabled={isLoading || !selectedCountryId}
         >
           Reset
         </button>
-        <button type="submit" disabled={isLoading || !selectedCountryId}>
+        <button
+          type="submit"
+          style={{ border: "1px solid grey" }}
+          disabled={isLoading || !selectedCountryId}
+        >
           Send
         </button>
       </div>

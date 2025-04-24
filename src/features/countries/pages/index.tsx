@@ -9,7 +9,7 @@ export default function Countries() {
     undefined
   );
 
-  const { countries, loading: isLoading } = useGetCountries();
+  const { countries, loading } = useGetCountries();
 
   const handleSubmit = (countryId: string) => {
     const country = countries.find((country) => country.code === countryId);
@@ -28,7 +28,7 @@ export default function Countries() {
 
       <CountryForm
         countries={countries}
-        isLoading={isLoading}
+        isLoading={loading}
         onSubmit={handleSubmit}
       />
 

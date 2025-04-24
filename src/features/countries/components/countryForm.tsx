@@ -47,7 +47,6 @@ export default function CountryForm({
           style={{
             width: "250px",
             padding: "4px",
-            border: "2px solid black",
             borderRadius: "4px",
           }}
         >
